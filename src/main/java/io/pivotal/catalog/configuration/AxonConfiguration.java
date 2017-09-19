@@ -18,7 +18,7 @@ public class AxonConfiguration {
     private static final Logger LOG = LoggerFactory.getLogger(PcfAxonCqrsQuerySideApplication.class);
 
     @Bean
-    public SpringAMQPMessageSource complaintEventsMethod(Serializer serializer) {
+    public SpringAMQPMessageSource eventsMethod(Serializer serializer) {
         return new SpringAMQPMessageSource(new DefaultAMQPMessageConverter(serializer)) {
 
             @RabbitListener(queues = "${axon.amqp.exchange}")
