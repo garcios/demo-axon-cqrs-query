@@ -28,12 +28,13 @@ public class EventProcessorTest {
 
     String uuid;
     String name;
+    double price;
 
     @Before
     public void init(){
         uuid = UUID.randomUUID().toString();
         name = "test-"+uuid;
-        event = new ProductAddedEvent(uuid, name);
+        event = new ProductAddedEvent(uuid, name, price);
         processor = new EventProcessor(repo);
     }
 

@@ -9,13 +9,15 @@ public class Product {
     @Id
     String id;
     String name;
+    double price;
 
     public Product() {
     }
 
-    public Product(String id, String name) {
+    public Product(String id, String name, double price) {
         this.id = id;
         this.name = name;
+        this.price=price;
     }
 
     public String getId() {
@@ -25,6 +27,11 @@ public class Product {
     public String getName() {
         return name;
     }
+    
+    
+    public double getPrice(){
+    	return price;
+    }
 
     public void setId(String id) {
         this.id = id;
@@ -32,5 +39,9 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public void setPrice(double price){
+    	this.price=price;
     }
 }
