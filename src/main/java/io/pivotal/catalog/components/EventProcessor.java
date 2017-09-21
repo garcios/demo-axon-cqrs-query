@@ -22,11 +22,11 @@ import org.springframework.stereotype.Component;
 *
 * So we annotate the class with @ProcessorGroup(“amqpEvents”) to configure the event processor (note default processor
 * would use the package-name). We also need to add to the application.properties the following setting
-* “axon.eventhandling.processors.amqpEvents.source=complaintEventsMethod”. You'll see this property in GitHub as that's
+* “axon.eventhandling.processors.amqpEvents.source=eventsMethod”. You'll see this property in GitHub as that's
 * where our configuration comes from for this app as it's been externalised by Spring Cloud Config.
 *
-* Note that the “complaintEventsMethod” keyword in the properties comes from (and must match) the @Bean name of the
-* complaintEventsMethod(Serializer serializer) method in the AxonConfiguration class!
+* Note that the “eventsMethod” keyword in the properties comes from (and must match) the @Bean name of the
+* eventsMethod(Serializer serializer) method in the AxonConfiguration class!
 */
 
 @Component
@@ -44,6 +44,6 @@ public class EventProcessor {
     @EventHandler // Mark this method as an Axon Event Handler
     public void on(ProductAddedEvent productAddedEvent) {
         repo.save(new Product(productAddedEvent.getId(), productAddedEvent.getName(), productAddedEvent.getPrice()) );
-        LOG.info("A product was added! Id={} Name={}", productAddedEvent.getId(), productAddedEvent.getName());
+        LOG.info("A product was added! Id={} Name={}, Price={}", productAddedEvent.getId(), productAddedEvent.getName(), productAddedEvent.getPrice());
     }
 }
