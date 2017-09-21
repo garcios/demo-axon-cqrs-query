@@ -5,6 +5,7 @@ import io.pivotal.catalog.PcfAxonCqrsQuerySideApplication;
 import org.axonframework.amqp.eventhandling.DefaultAMQPMessageConverter;
 import org.axonframework.amqp.eventhandling.spring.SpringAMQPMessageSource;
 import org.axonframework.serialization.Serializer;
+import org.axonframework.serialization.json.JacksonSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
@@ -29,4 +30,12 @@ public class AxonConfiguration {
             }
         };
     }
+    
+    
+
+	@Bean
+	Serializer axonJsonSerializer() {
+		return new JacksonSerializer();
+	}
+
 }
