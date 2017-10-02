@@ -1,4 +1,4 @@
-package io.pivotal.catalog.entities;
+package com.demo.catalog.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

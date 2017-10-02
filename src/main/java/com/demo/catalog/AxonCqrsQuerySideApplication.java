@@ -1,4 +1,4 @@
-package io.pivotal.catalog;
+package com.demo.catalog;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,9 +10,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //@EnableDiscoveryClient
 @SpringBootApplication
 @EnableJpaRepositories
-public class PcfAxonCqrsQuerySideApplication {
+public class AxonCqrsQuerySideApplication {
 
-    private static final Logger LOG = LoggerFactory.getLogger(PcfAxonCqrsQuerySideApplication.class);
+    private static final Logger LOG = LoggerFactory.getLogger(AxonCqrsQuerySideApplication.class);
 
     /*
     * There is not much to do here. Apart from integrating with Rabbit for the incoming events
@@ -21,7 +21,7 @@ public class PcfAxonCqrsQuerySideApplication {
     */
 
     public static void main(String[] args) {
-        SpringApplication.run(PcfAxonCqrsQuerySideApplication.class, args);
+        SpringApplication.run(AxonCqrsQuerySideApplication.class, args);
         LOG.info("Starting the QUERY-SIDE PCF Axon CQRS Demo [The Catalog Viewer] with SpringBoot.");
     }
 }

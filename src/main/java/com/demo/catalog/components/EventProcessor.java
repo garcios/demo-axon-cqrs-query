@@ -1,13 +1,14 @@
-package io.pivotal.catalog.components;
+package com.demo.catalog.components;
 
-import io.pivotal.catalog.entities.Product;
-import io.pivotal.catalog.events.ProductAddedEvent;
-import io.pivotal.catalog.repositories.ProductRepository;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import com.demo.catalog.entities.Product;
+import com.demo.catalog.events.ProductAddedEvent;
+import com.demo.catalog.repositories.ProductRepository;
 
 
 /*

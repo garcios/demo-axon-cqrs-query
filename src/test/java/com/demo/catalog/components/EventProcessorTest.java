@@ -1,14 +1,16 @@
-package io.pivotal.catalog.components;
+package com.demo.catalog.components;
 
-import io.pivotal.catalog.entities.Product;
-import io.pivotal.catalog.events.ProductAddedEvent;
-import io.pivotal.catalog.repositories.ProductRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.demo.catalog.components.EventProcessor;
+import com.demo.catalog.entities.Product;
+import com.demo.catalog.events.ProductAddedEvent;
+import com.demo.catalog.repositories.ProductRepository;
 
 import java.util.ArrayList;
 import java.util.List;

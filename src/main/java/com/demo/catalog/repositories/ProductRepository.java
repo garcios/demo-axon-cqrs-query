@@ -1,9 +1,10 @@
-package io.pivotal.catalog.repositories;
+package com.demo.catalog.repositories;
 
-import io.pivotal.catalog.entities.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
+
+import com.demo.catalog.entities.Product;
 
 /**
  * Uses 'Spring Data JPA' and 'Spring Data Rest' to create a Repository.

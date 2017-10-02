@@ -1,7 +1,8 @@
-package io.pivotal.catalog.configuration;
+package com.demo.catalog.configuration;
 
+import com.demo.catalog.AxonCqrsQuerySideApplication;
 import com.rabbitmq.client.Channel;
-import io.pivotal.catalog.PcfAxonCqrsQuerySideApplication;
+
 import org.axonframework.amqp.eventhandling.DefaultAMQPMessageConverter;
 import org.axonframework.amqp.eventhandling.spring.SpringAMQPMessageSource;
 import org.axonframework.serialization.Serializer;
@@ -16,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AxonConfiguration {
 
-    private static final Logger LOG = LoggerFactory.getLogger(PcfAxonCqrsQuerySideApplication.class);
+    private static final Logger LOG = LoggerFactory.getLogger(AxonCqrsQuerySideApplication.class);
 
     @Bean
     public SpringAMQPMessageSource eventsMethod(Serializer serializer) {
