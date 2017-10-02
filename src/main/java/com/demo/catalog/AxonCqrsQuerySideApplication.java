@@ -22,6 +22,6 @@ public class AxonCqrsQuerySideApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AxonCqrsQuerySideApplication.class, args);
-        LOG.info("Starting the QUERY-SIDE PCF Axon CQRS Demo [The Catalog Viewer] with SpringBoot.");
+        LOG.info("Starting the QUERY-SIDE Axon CQRS Demo [The Catalog Viewer] with SpringBoot.");
     }
 }
